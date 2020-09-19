@@ -1,10 +1,11 @@
 import { Router } from 'express';
 import { uploaderController } from '../controllers/UploaderController';
+import  multerConfig  from '../config/muilter.config';
 
 const router = Router();
 
 router.route('/uploads')
-    .post(uploaderController.saveFile);
+    .post(multerConfig, uploaderController.saveUpload);
 
 
 export default router;
