@@ -1,0 +1,11 @@
+{
+  "name": "image-uploader-api",
+  "version": "1.0.0",
+  "description": "Image uploader API - challenge https://devchallenges.io/",
+  "main": "dist/main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "deoraczo",
+  "license": "ISC"
+}
