@@ -9,12 +9,11 @@ class UploaderController {
   private fileSotarge!: FileStorageStrategy;
 
   saveUpload = async (req: Request, res: Response) => {
-      console.log(this.fileSotarge)
         try {
             const fileRelativePath = await this.fileSotarge.saveUploaded(req.file);
             return res.json({
                 message: "Image uploaded successfully.",
-                fileUrl: fileRelativePath,
+                previewUrl: `${req.protocol}://${req.get('host')}/${fileRelativePath}`,
             });
         } catch (error) {
             return res.status(422).json({
